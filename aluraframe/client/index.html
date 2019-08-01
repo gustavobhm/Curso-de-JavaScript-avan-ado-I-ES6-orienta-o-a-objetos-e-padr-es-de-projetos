@@ -31,16 +31,21 @@
         </div>
 
         <button class="btn btn-primary" type="submit">Incluir</button>
+
     </form>
 
     <div class="text-center">
+
         <button class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
+
         <button class="btn btn-primary text-center" type="button">
             Apagar
         </button>
+
     </div>
+
     <br>
     <br>
 
@@ -58,7 +63,20 @@
         </tbody>
 
         <tfoot>
-            <script src="js/index.js"></script>
+            <script src="js/app/models/Negociacao.js"></script>
+            <script>
+
+                let hoje = new Date();
+
+                let n1 = new Negociacao(hoje, 5, 700);
+
+                console.log(n1.data);
+
+                hoje.setDate(11);
+
+                console.log(n1.data);
+
+            </script>
         </tfoot>
     </table>
 
